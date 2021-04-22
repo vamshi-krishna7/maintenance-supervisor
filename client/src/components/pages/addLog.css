@@ -1,0 +1,75 @@
+.add-log-section {
+    margin-top: 4rem;
+    padding: 5rem;
+    position: relative;
+    height: 90vh;
+}
+
+.addLog-form-container{
+    background-color: white;
+    position: absolute;
+    width: 21rem;
+    height: 22rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.5rem;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+}
+.add-log-form-group {
+    margin: 0.5rem 0rem;
+}
+.add-log-primary-header {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+.add-log-textarea {
+    resize: none;
+    border-radius: 3px;
+}
+.add-log-textarea:focus {
+    outline-color:  #5192d8;
+}
+.add-log-form-group > select {
+    width: 11rem;
+    height: 2rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+select:focus {
+    outline-color:  #5192d8;
+}
+.add-log-form-group > select > option {
+    font-size: 1rem;
+}   
+
+.submit-btn {
+    border: none;
+    background-color: coral;
+    outline: none;
+    padding:  0.5rem 1.563rem;
+    margin: 0.625rem auto;
+    display: block;
+    font-size: 1.1rem;
+    transition: letter-spacing 250ms ease-in-out;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+textarea {
+    width: 100%;
+}
+
+@media only Screen and (max-width: 768px) {
+    .form-container-addLog {
+        width: 80vw;
+    }
+    .submit-btn{
+        width: 80%;
+        padding: 0.5rem 1.563rem;
+    }
+}

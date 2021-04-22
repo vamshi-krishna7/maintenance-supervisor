@@ -1,0 +1,471 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  font-family: 'Rubik', sans-serif;
+    background-color: #5CDB95;
+    -webkit-tap-highlight-color:rgba(255, 255, 255, 0)
+}
+
+/*                                            start of navbar                            */
+
+.navbar {
+  background-color: rgb(92, 219, 149, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  z-index: 1;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.company-logo > a{
+  color: #05388B;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+/* coral */
+.nav-icon {
+  font-size: 1.5rem;
+  color: #05388B;
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;   
+  transition: all 0.3s linear;
+  list-style-type: none;
+}
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: #05388B;
+  transition: all 0.3s linear;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.nav-links a:hover {
+  color: #EDF5E1;
+}
+
+.show-nav {
+  height: 200px;
+}
+hr {
+  border: 0;
+  height: 1.5px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+/* big screen */
+@media screen and (min-width: 768px) { 
+  .nav-btn {
+    display: none;
+  }
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+    margin-left: 4rem;
+  }
+  .nav-links a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media only screen and (max-width: 380px){
+  .company-logo > a{
+    font-size: 1rem;
+  }
+}
+
+/*                                              end of navbar                                */
+
+/*                                               add tech                                    */
+.add-tech-section {
+    margin-top: 8vh;
+    height: 90vh;
+}
+
+.add-tech-form {
+    width: 20rem;   
+    height: 20rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: -2px 2px 28px 3px rgba(0, 0, 0, 0.397);
+    background-color: rgb(255,255,255); 
+    border-radius: 4px;
+  }
+  .add-tech-form-content {
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .add-tech-form-header {
+    text-align: center;
+  }
+  .add-tech-heading-secondary {
+    font-size: 2.3rem;
+    font-weight: 600;
+  }
+
+  .add-tech-form-group{
+    width: 80%;
+    margin: 0.8rem auto;
+  }
+  
+  .form-input {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    background-color: rgb(238,238,238);
+    border: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-bottom: 3px solid rgb(101, 159, 185);
+  }
+  .add-tech-btn-container {
+    margin: 1rem 0rem;
+    text-align: center;
+  }
+  .btn-primary {
+    background-color: coral;
+    text-decoration: none;
+    padding: 0.6rem 3.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 250ms letter-spacing ease-in-out;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  .btn-primary:hover {
+    letter-spacing: 2px;
+  }
+
+/*                                              end of add tech                                        */
+
+/*                                             start of add log                                        */
+.add-log-section {
+  margin-top: 4rem;
+  padding: 5rem;
+  position: relative;
+  height: 90vh;
+}
+
+.addLog-form-container{
+  background-color: white;
+  position: absolute;
+  width: 21rem;
+  height: 22rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin: 1rem auto;
+  font-size: 1.1rem;
+  box-shadow: -2px 2px 28px 3px rgba(0, 0, 0, 0.397);
+}
+.add-log-form-group {
+  margin: 0.5rem 0rem;
+}
+.add-log-primary-header {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.add-log-textarea {
+  resize: none;
+  border-radius: 3px;
+}
+.add-log-textarea:focus {
+  outline-color:  #5192d8;
+}
+.add-log-form-group > select {
+  width: 11rem;
+  height: 2rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+select:focus {
+  outline-color:  #5192d8;
+}
+.add-log-form-group > select > option {
+  font-size: 1rem;
+}   
+
+.submit-btn {
+  border: none;
+  background-color: coral;
+  outline: none;
+  padding:  0.5rem 1.563rem;
+  margin: 0.625rem auto;
+  display: block;
+  font-size: 1.1rem;
+  transition: letter-spacing 250ms ease-in-out;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+textarea {
+  width: 100%;
+}
+
+@media only Screen and (max-width: 768px) {
+  .form-container-addLog {
+      width: 80vw;
+  }
+  .submit-btn{
+      width: 80%;
+      padding: 0.5rem 1.563rem;
+  }
+}
+
+
+/* end of add log */
+
+/* logs section*/
+.logs-section {
+    margin-top: 5rem;
+}
+.no-logs-container {
+    position: absolute;
+    width: 25rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid red; */
+    text-align: center;
+    color: black;
+}
+.no-logs-container > h1 {
+    font-size: 2.2rem;
+}
+.btn-create-log{
+    text-decoration: none;
+    background-color: coral;
+    display: inline-block;
+    padding: 0.5rem 1.563rem;
+    font-size: 1.1rem;
+    color: inherit;
+    transition: letter-spacing 250ms ease-in-out;
+}
+.btn-create-log:hover {
+    letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 768px){
+    .no-logs-container {
+        width: 90vw;
+    }
+    .btn-create-log{
+        padding: 0.4rem 1.8rem;
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 380px){
+    .no-logs-container {
+        width: 95vw;
+    }
+    .no-logs-container > h1 {
+        font-size: 1.8rem;
+    }
+    .btn-create-log{
+        padding: 0.2rem 1.8rem;
+        font-size: 1rem;
+    }
+}
+
+
+  /* end of logs section*/
+
+  /* start of log-item */
+
+.log-card.red {
+  background-color: #ff7652b3;
+  width: 60rem;
+  margin: 0.5rem auto;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  position: relative;
+}
+.log-card.blue {
+    background-color: #a2cac2;
+    width: 60rem;
+  margin: 0.5rem auto;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+    position: relative;
+}
+.message-detail-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 8rem;
+}
+.log-message-red {
+  text-align: center;
+  font-size: 1.4rem;
+  color: rgba(255, 0, 0, 0.719);
+}
+.log-message-green {
+  text-align: center;
+  font-size: 1.4rem;
+  color: rgba(0, 128, 0, 0.74);
+}
+
+.log-message-red > a, .log-message-green > a{
+  text-decoration: none;
+}
+.log-detail > p {
+  text-align: center;
+}
+.log-detail > p >span{
+    color: rgba(0, 47, 255, 0.9);
+}
+.trash-icon{
+    position: absolute;
+    right: 3%;
+    top: 10%;
+    color: white;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: transform 250ms ease-out;
+    margin-left: 1rem;
+}
+.trash-icon:hover {
+    transform: scale(1.2);
+    color: rgba(255, 0, 0, 0.7);
+}
+.update-icon {
+    position: absolute;
+    right: 3%;
+    bottom: 10%;
+    color: green;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: transform 250ms ease-out;
+}
+.update-icon:hover {
+    transform: scale(1.2);
+    color: rgba(255, 0, 0, 0.7);
+}
+
+
+@media only screen and (max-width: 768px) {
+  .log-card.red {
+      width: 40rem;
+      height: 7rem;
+  }
+  .log-card.blue {
+      width: 40rem;
+      height: 7rem;
+  }
+  .message-detail-card {
+    min-height: 6rem;
+  }
+  .log-message-red {
+      font-size: 1.1rem;
+  }
+  .log-message-green {
+      font-size: 1.1rem;
+  }
+
+  .log-detail > p  {
+        font-size: 0.9rem;
+  }
+  .trash-icon{
+        font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .log-card.red {
+    width: 30rem;
+    height: 7rem;
+}
+.log-card.blue {
+    width: 30rem;
+    height: 7rem;
+}
+.message-detail-card {
+  min-height: 6rem;
+}
+}
+@media only screen and (max-width: 500px) {
+  .log-card.red {
+      width: 23rem;
+      height: 7rem;
+  }
+  .log-card.blue {
+      width: 23rem;
+      height: 7rem;
+  }
+
+  .message-detail-card {
+    min-height: 6rem;
+  }
+
+  .log-message-red {
+    font-size: 1.1rem;
+  }
+  .log-message-green {
+    font-size: 1.1rem;
+  }
+
+  .log-detail > p  {
+    font-size: 0.75rem;
+  }
+  .trash-icon{
+    font-size: 1.2rem;
+  }
+  .update-icon {
+    right: 2%;
+}
+}
+/* end of log-item */
+
+/* about page */
+
+.aboutPage {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+}
